@@ -81,8 +81,8 @@ function App() {
                 <Sparkles className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h1 className="font-bold text-gray-800">AI智能起名顾问</h1>
-                <p className="text-xs text-gray-500">从工具到顾问，为您定制专属好名</p>
+                <h1 className="font-bold text-gray-800">起名大师</h1>
+                <p className="text-xs text-gray-500">AI 赋能，名承古今——给孩子一生的好寓意</p>
               </div>
             </div>
           </div>
@@ -97,12 +97,12 @@ function App() {
               </div>
               
               <h2 className="text-2xl font-bold text-gray-800 mb-3">
-                欢迎来到 AI 智能起名顾问
+                欢迎来到起名大师
               </h2>
               
               <p className="text-gray-600 mb-6 leading-relaxed">
-                不同于传统的批量生成，我将像一位专业的起名顾问，
-                通过对话了解您的期望，为宝宝定制专属好名。
+                区别于传统起名的“效率低下”和纯AI工具的“冰冷生成”，
+                起名大师精准，个性，智能得为宝宝定制专属好名。
               </p>
             </div>
             
@@ -161,7 +161,7 @@ function App() {
               <Sparkles className="w-4 h-4 text-white" />
             </div>
             <div>
-              <h1 className="font-bold text-gray-800 text-sm">AI智能起名顾问</h1>
+              <h1 className="font-bold text-gray-800 text-sm">起名大师</h1>
               {babyInfo?.surname && (
                 <p className="text-xs text-gray-500">{babyInfo.surname}姓宝宝</p>
               )}
