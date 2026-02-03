@@ -73,9 +73,9 @@ function App() {
   if (!hasStarted) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 flex flex-col">
-        {/* 顶部导航 */}
+        {/* 顶部导航 - 左对齐 */}
         <header className="bg-white/80 backdrop-blur-md border-b border-amber-100 shadow-sm">
-          <div className="max-w-lg mx-auto px-4 py-3 flex items-center justify-center">
+          <div className="max-w-lg mx-auto px-4 py-3">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center shadow-lg">
                 <Sparkles className="w-5 h-5 text-white" />
@@ -101,8 +101,8 @@ function App() {
               </h2>
               
               <p className="text-gray-600 mb-6 leading-relaxed">
-                区别于传统起名的“效率低下”和纯AI工具的“冰冷生成”，
-                起名大师精准，个性，智能得为宝宝定制专属好名。
+                以千年文化为根，借AI智慧为翼，
+                为每个宝宝量身定制专属好名，让名字成为一生的美好祝福。
               </p>
             </div>
             
