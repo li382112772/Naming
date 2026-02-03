@@ -1,0 +1,160 @@
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(251, 191, 36, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(251, 191, 36, 0.5);
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(251, 191, 36, 0.5);
+  }
+}
+
+/* 消息动画 */
+.chat-message-enter {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* 卡片悬停效果 */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* 五行颜色 */
+.wuxing-gold {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+}
+
+.wuxing-wood {
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+}
+
+.wuxing-water {
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+}
+
+.wuxing-fire {
+  background: linear-gradient(135deg, #f87171, #ef4444);
+}
+
+.wuxing-earth {
+  background: linear-gradient(135deg, #d97706, #b45309);
+}
+
+/* 渐变文字 */
+.gradient-text {
+  background: linear-gradient(135deg, #f59e0b, #ea580c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 按钮光效 */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glow::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+/* 响应式调整 */
+@media (max-width: 640px) {
+  .max-w-3xl {
+    max-width: 100%;
+  }
+  
+  header .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* 输入框聚焦效果 */
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.2);
+}
+
+/* 选中状态 */
+.selected-ring {
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.5);
+}
+
+/* 标签样式 */
+.tag-gradient {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(234, 88, 12, 0.1));
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+/* 分隔线渐变 */
+.divider-gradient {
+  background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.3), transparent);
+  height: 1px;
+}
