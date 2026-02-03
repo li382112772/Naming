@@ -25,6 +25,23 @@ export interface BaziInfo {
   monthWuxing: string;
   dayWuxing: string;
   hourWuxing: string;
+  // 藏干
+  yearCanggan: string;
+  monthCanggan: string;
+  dayCanggan: string;
+  hourCanggan: string;
+  // 藏干五行
+  yearCangganWuxing: string;
+  monthCangganWuxing: string;
+  dayCangganWuxing: string;
+  hourCangganWuxing: string;
+  // 纳音
+  yearNayin: string;
+  monthNayin: string;
+  dayNayin: string;
+  hourNayin: string;
+  // 本命
+  benming: string;
 }
 
 // 五行分析
@@ -34,9 +51,25 @@ export interface WuxingAnalysis {
   water: number;
   fire: number;
   earth: number;
+  // 五行含量（详细数值）
+  goldValue: number;
+  woodValue: number;
+  waterValue: number;
+  fireValue: number;
+  earthValue: number;
   xiyong: string[];
   jiyong: string[];
-}
+  // 日主
+  rizhu: string;
+  rizhuWuxing: string;
+  // 同类/异类
+  tonglei: string[];
+  yilei: string[];
+  tongleiScore: number;
+  yileiScore: number;
+  // 旺衰判定
+  wangshuai: string;
+}}
 
 // 名字方向
 export interface NameDirection {

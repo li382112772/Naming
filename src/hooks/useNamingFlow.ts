@@ -161,7 +161,24 @@ const mockBazi: BaziInfo = {
   yearWuxing: '火火',
   monthWuxing: '水火',
   dayWuxing: '土土',
-  hourWuxing: '木水'
+  hourWuxing: '木水',
+  // 藏干
+  yearCanggan: '丙甲',
+  monthCanggan: '庚丙',
+  dayCanggan: '丁乙己',
+  hourCanggan: '癸',
+  // 藏干五行
+  yearCangganWuxing: '火木',
+  monthCangganWuxing: '金火',
+  dayCangganWuxing: '火木土',
+  hourCangganWuxing: '水',
+  // 纳音
+  yearNayin: '炉中火',
+  monthNayin: '长流水',
+  dayNayin: '天上火',
+  hourNayin: '海中金',
+  // 本命
+  benming: '火命'
 };
 
 // 模拟五行分析
@@ -171,8 +188,24 @@ const mockWuxing: WuxingAnalysis = {
   water: 2,
   fire: 2,
   earth: 2,
+  // 五行含量（详细数值）
+  goldValue: 0.54,
+  woodValue: 1.9,
+  waterValue: 2.12,
+  fireValue: 2.66,
+  earthValue: 1.71,
   xiyong: ['金', '木'],
-  jiyong: ['土', '火']
+  jiyong: ['土', '火'],
+  // 日主
+  rizhu: '己',
+  rizhuWuxing: '土',
+  // 同类/异类
+  tonglei: ['土', '火'],
+  yilei: ['金', '木', '水'],
+  tongleiScore: 4.37,
+  yileiScore: 4.56,
+  // 旺衰判定
+  wangshuai: '日主偏弱'
 };
 
 export function useNamingFlow() {
