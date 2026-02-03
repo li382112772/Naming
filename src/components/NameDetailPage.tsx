@@ -21,6 +21,7 @@ interface NameDetailPageProps {
   onChange: () => void;
   onSelect: () => void;
   onBack: () => void;
+  showBabyInfo?: string; // 显示宝宝姓氏（用于收藏详情页）
 }
 
 export function NameDetailPage({ 
@@ -29,7 +30,8 @@ export function NameDetailPage({
   onFavorite, 
   onChange, 
   onSelect,
-  onBack
+  onBack,
+  showBabyInfo
 }: NameDetailPageProps) {
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -67,7 +69,12 @@ export function NameDetailPage({
           <ChevronLeft className="w-5 h-5 mr-1" />
           返回
         </Button>
-        <span className="font-medium text-gray-800">名字详情</span>
+        <div className="flex flex-col items-center">
+          <span className="font-medium text-gray-800">名字详情</span>
+          {showBabyInfo && (
+            <span className="text-xs text-gray-500">{showBabyInfo}姓宝宝的收藏</span>
+          )}
+        </div>
         <Button variant="ghost" size="sm" onClick={onFavorite}>
           <Heart className={`w-5 h-5 ${isFavorite ? 'fill-red-500 text-red-500' : 'text-gray-400'}`} />
         </Button>

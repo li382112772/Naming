@@ -131,6 +131,31 @@ export interface ChatMessage {
   data?: any;
 }
 
+// 收藏项
+export interface FavoriteItem {
+  id: string;
+  babyId: string;
+  babySurname: string;
+  name: string;
+  nameDetail: NameDetail;
+  createdAt: number;
+}
+
+// 宝宝起名会话
+export interface BabySession {
+  id: string;
+  babyInfo: BabyInfo;
+  expectation?: UserExpectation;
+  messages: ChatMessage[];
+  currentStep: string;
+  selectedDirection?: string;
+  currentNameIndex: Record<string, number>; // 各方向当前名字索引
+  selectedName?: string;
+  baziData?: { bazi: BaziInfo; wuxing: WuxingAnalysis };
+  createdAt: number;
+  updatedAt: number;
+}
+
 // 应用状态
 export interface AppState {
   step: 'welcome' | 'babyInfo' | 'expectation' | 'additional' | 'bazi' | 'direction' | 'names' | 'detail';
